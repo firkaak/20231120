@@ -2,22 +2,55 @@
 <html lang="hu">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JavaScript Unit teszt feladat</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>JavaScript Unit teszt feladat</title>
 	<script type="text/javascript">
-	<!-- Ide jön  a feladat megoldása... -->
-	
-	
-	<!-- Idáig -->
+		//Ide jön  a feladat megoldása... 
+		const kivalogatParosOtven = (arr) => {
+			return arr.filter(item => ((item > 50) && (item % 2 === 0)));
+		};
+
+		const aBetukSzamaDiv = () => {
+			let baseToTest = document.querySelector('div').innerText;
+			let textArr = baseToTest.split("");
+			let result = 0;
+			for (let i = 0; i < textArr.length; i++) {
+				if (textArr[i] === "a") {
+					result += 1;
+				}
+			}
+			return result;
+		};
+
+
+		const osszeadasFeliras = (str, a, b) => {
+			let num1 = parseInt(a);
+			let num2 = parseInt(b);			
+
+			let myPara = document.createElement('p');
+			myPara.innerHTML = `${num1} + ${num2} = ${num1+ num2}`;
+
+			let resField = document.getElementsByClassName(str)[0];
+			
+			resField.appendChild(myPara);
+			
+		}
+
+
+
+		//Idáig 
 	</script>
 	<script src="testBaseUnit.js"></script>
 </head>
+
 <body>
-    <div></div>
+	<div></div>
 	<hr>
 	<div id="testResult">
-	<h2>Tesztek</h2></div>
+		<h2>Tesztek</h2>
+	</div>
 </body>
+
 </html>
